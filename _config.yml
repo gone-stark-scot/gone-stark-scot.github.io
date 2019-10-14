@@ -5,7 +5,7 @@
 #
 # theme: jekyll-theme-prologue
 chrisbobbe/jekyll-theme-prologue
-# collections: [sections]
+collections: [sections]
 #
 # They activate the theme and tell Jekyll to find your homepage content
 # in /_sections. Note where "sections" starts with an underscore
