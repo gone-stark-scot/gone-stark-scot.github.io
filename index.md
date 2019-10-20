@@ -7,3 +7,4 @@ title: Home
 icon: fa-home
 order: 1
 ---
+This is some content
