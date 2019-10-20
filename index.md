@@ -2,4 +2,4 @@
 layout: home
 title: Gone
 ---
-<h1>Hello World!</h1>
+Hello World!
