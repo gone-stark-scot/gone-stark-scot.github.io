@@ -58,7 +58,9 @@ dribbble_url:
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
+# This works, but doesn't do the portfolio layout things
+#remote_theme: jekyll/minima
+
 # The following settings are NECESSARY for the Prologue theme to run:
-#remote_theme: chrisbobbe/jekyll-theme-prologue
-remote_theme: jekyll/minima
+remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
