@@ -62,5 +62,7 @@ google_analytics:
 #remote_theme: jekyll/minima
 
 # The following settings are NECESSARY for the Prologue theme to run:
-remote_theme: chrisbobbe/jekyll-theme-prologue
+# Testing out theme-switching
+remote_theme: mmistakes/minimal-mistakes
+#remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
