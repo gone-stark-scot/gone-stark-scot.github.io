@@ -106,10 +106,10 @@ order: 1
 
 <div class="row">
 {% for i in (2..7) %}
-<h1> {{i}} </h1>
-  <div class="2u 3u(narrow) 4u(narrower) 12u$(mobile)">
+{% capture ending %}{% cycle "","","","$" %}{% endcapture %}
+  <div class="2u 3u{{ending}}(narrow) 4u(narrower) 12u$(mobile)">
     <div class="item">
-      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic0{{- i -}}.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
+      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic0{{i}}.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
       <header>
         <h3>Ipsum Feugiat</h3>
       </header>
