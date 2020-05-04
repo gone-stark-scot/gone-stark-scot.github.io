@@ -107,12 +107,19 @@ order: 1
 <div class="row">
 {% for i in (2..7) %}
 {% capture ending %}
-{% cycle "","","","$" %}
+3u{%- cycle "","","","$" -%}(narrow)
 {% endcapture %}
 Ending{{ending}}foo{{i}}bar
-  <div class="2u 3u{{ending}}(narrow) 4u(narrower) 12u$(mobile)">
+{% capture pic %}
+'assets/images/pic0{{-i--}}.jpg'
+{% endcapture %}
+{% capture picurl %}
+{{ {{pic}} | relative_url }}
+{% endcapture %}
+Pic{{pic}}foo{{picurl}}
+  <div class="2u {{-ending-}} 4u(narrower) 12u$(mobile)">
     <div class="item">
-      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic0{{-i-}}.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
+      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{picurl}}" alt="Ipsum Feugiat" /></a>
       <header>
         <h3>Ipsum Feugiat</h3>
       </header>
