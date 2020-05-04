@@ -9,7 +9,7 @@ order: 1
 ---
 
 <div class="row">
-  <div class="3u 4u$(narrower) 12u$(mobile)">
+  <div class="3u 4u(narrower) 12u(mobile)">
     <div class="item">
       <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
       <header>
@@ -23,7 +23,7 @@ order: 1
       </header>
     </div>
   </div>
-  <div class="3u 4u$(narrower) 12u$(mobile)">
+  <div class="3u 4u(narrower) 12u(mobile)">
     <div class="item">
       <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
       <header>
@@ -37,7 +37,7 @@ order: 1
       </header>
     </div>
   </div>
-  <div class="3u 4u$(narrower) 12u$(mobile)">
+  <div class="3u 4u(narrower) 12u(mobile)">
     <div class="item">
       <a href="#" class="image fit"><img src="{{ 'assets/images/pic06.jpg' | relative_url }}" alt="Dolor Penatibus" /></a>
       <header>
