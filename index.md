@@ -7,3 +7,7 @@ title: Gone
 icon: fa-home
 order: 1
 ---
+Here's a test of content
+{{site}}
+{{page}}
+{{site.title}}
