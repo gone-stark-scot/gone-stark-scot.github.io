@@ -110,7 +110,7 @@ order: 1
 3u{%- cycle "","","","$" -%}(narrow)
 {% endcapture %}
 {% capture pic %}
-'assets/images/pic0{{-i-}}.jpg'
+assets/images/pic0{{-i-}}.jpg
 {% endcapture %}
 {% capture picurl %}
 {{- pic | relative_url -}}
