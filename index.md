@@ -62,7 +62,7 @@ order: 1
       </header>
     </div>
   </div>
-  <div class="3u 4u(narrower) 12u$(mobile)">
+  <div class="3u 4u$(narrower) 12u$(mobile)">
     <div class="item">
       <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
       <header>
@@ -70,7 +70,7 @@ order: 1
       </header>
     </div>
   </div>
-  <div class="3u 4u(narrower) 12u$(mobile)">
+  <div class="3u$ 4u(narrower) 12u$(mobile)">
     <div class="item">
       <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
       <header>
@@ -94,7 +94,7 @@ order: 1
       </header>
     </div>
   </div>
-  <div class="3u 4u(narrower) 12u$(mobile)">
+  <div class="3u 4u$(narrower) 12u$(mobile)">
     <div class="item">
       <a href="#" class="image fit"><img src="{{ 'assets/images/pic07.jpg' | relative_url }}" alt="Orci Convallis" /></a>
       <header>
