@@ -64,17 +64,17 @@ order: 1
   </div>
   <div class="2u 3u(narrow) 4u(narrower) 12u(mobile)">
     <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
+      <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
       <header>
-        <h3>Rhoncus Semper</h3>
+        <h3>Magna Nullam</h3>
       </header>
     </div>
   </div>
   <div class="2u 3u(narrow) 4u(narrower) 12u(mobile)">
     <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
+      <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
       <header>
-        <h3>Magna Nullam</h3>
+        <h3>Rhoncus Semper</h3>
       </header>
     </div>
   </div>
