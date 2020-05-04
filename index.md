@@ -109,14 +109,12 @@ order: 1
 {% capture ending %}
 3u{%- cycle "","","","$" -%}(narrow)
 {% endcapture %}
-Ending{{ending}}foo{{i}}bar
 {% capture pic %}
 'assets/images/pic0{{-i-}}.jpg'
 {% endcapture %}
 {% capture picurl %}
-{{ pic | relative_url }}
+{{- pic | relative_url -}}
 {% endcapture %}
-Pic{{-pic-}}foo{{-picurl-}}bar
   <div class="2u {{-ending-}} 4u(narrower) 12u$(mobile)">
     <div class="item">
       <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{-picurl-}}" alt="Ipsum Feugiat" /></a>
