@@ -3,11 +3,10 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
-title: Gone
+title: We Will Remember Them
 icon: fa-th
 order: 1
 ---
-
 
 <div class="row">
   <div class="4u 12u$(mobile)">
