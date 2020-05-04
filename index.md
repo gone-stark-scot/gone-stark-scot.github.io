@@ -106,7 +106,7 @@ order: 1
 
 <div class="row">
 {% for i in (2..7) %}
-{{ assign picurl = 'assets/images/pic0{{-i-}}.jpg' | relative_url }}
+{{ assign picurl = i | prepend: "assets/images/pic0" | append: ".jpg" | relative_url }}
   <div class="2u 3u{%- cycle "","","","$" -%}(narrow) 4u(narrower) 12u$(mobile)">
     <div class="item">
       <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{-picurl-}}" alt="Ipsum Feugiat" /></a>
