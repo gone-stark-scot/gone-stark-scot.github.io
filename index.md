@@ -10,4 +10,5 @@ order: 1
 Test of some content in page layout
 
 {{site}}
-{{page.title}
+{{page.title}}
+
