@@ -7,5 +7,8 @@ picture: 'frogs-newnham-pandas'
 <span class="image fit"><img src="{{ '/assets/images/frogs-newnham-pandas.jpg' | relative_url }}" alt="{{page.title}}"/></span>
 
 {{ page.picture }}
-{{ page.picture | append '.jpg' }}
+
+{% assign pic = page.picture %}
+
+{{ pic | append '.jpg' }}
 
