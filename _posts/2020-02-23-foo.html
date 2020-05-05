@@ -9,9 +9,6 @@ picture: 'frogs-newnham-pandas'
 
 bar
 
-{% capture pic %}
-foo aha! 
-{{ page.picture }}
-{% endcapture %}
+{% capture pic %}{{ page.picture }}{% endcapture %}
 
-{{ pic }}
+{{ pic | append '.jpg' }}
