@@ -1,15 +1,7 @@
 ---
 title: 'Mugs: Frogs, Newnham College, Pandas from Edinburgh Zoo'
 layout: post
+picture: frogs-newnham-pandas
 ---
-<!-- Text stuff -->
-
-  <h2>Text</h2>
-<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-
-  <span class="image left"><img src="{{ 'assets/images/frogs-newnham-pandas.jpg' | relative_url }}" alt="Mugs: Frogs, Newnham College, Pandas from Edinburgh Zoo"/></span>
-
-  {{page.title}}
-  
-  <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+<span class="image fit"><img src="{{ picture | prepend '/assets/images/' | append '.jpg' | relative_url }}" alt="{{page.title}}"/></span>
 
