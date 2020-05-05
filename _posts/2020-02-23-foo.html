@@ -10,3 +10,8 @@ picture: 'frogs-newnham-pandas'
 
 {{ picture }}
 
+bar
+
+{% capture pic %}{{ page.picture }}{% endcapture %}
+
+{{ pic | append '.jpg' }}
