@@ -3,5 +3,8 @@ title: 'Mugs: Frogs, Newnham College, Pandas from Edinburgh Zoo'
 layout: post
 picture: 'frogs-newnham-pandas'
 ---
-<span class="image fit"><img src="{{ picture | prepend '/assets/images/' | append '.jpg' | relative_url }}" alt="{{page.title}}"/></span>
+
+{{ picture | append '.jpg' }}
+
+<span class="image fit"><img src="{{ '/assets/images/frogs-newnham-pandas.jpg' | relative_url }}" alt="{{page.title}}"/></span>
 
