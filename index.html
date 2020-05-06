@@ -16,7 +16,6 @@ order: 1
 <div id="main">
 
   <div class="row">
-
     {%- for _post in _posts -%}
     {% capture picurl %}/assets/images/{{-_post.picture-}}.jpg{% endcapture %}
     {% capture cycle2u %}{%- cycle "2u":"","","","","","$" -%}{% endcapture %}
@@ -24,7 +23,6 @@ order: 1
     {% capture cycle4u %}{%- cycle "4u":"","","$" -%}{% endcapture %}
     {% capture cycle6u %}{%- cycle "6u":"","$" -%}{% endcapture %}
     {% capture picclass %}2u{{cycle2u}} 3u{{-cycle3u-}}(narrow) 4u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
-    
     <div class="{{-picclass-}}">
       <div class="item">
         <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-_post.title-}}" /></a>
