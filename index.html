@@ -23,7 +23,7 @@ order: 1
     {% capture cycle3u %}{%- cycle "3u":"","","","$" -%}{% endcapture %}
     {% capture cycle4u %}{%- cycle "4u":"","","$" -%}{% endcapture %}
     {% capture cycle6u %}{%- cycle "6u":"","$" -%}{% endcapture %}
-    {% capture picclass %}2u{{-cycle2u-}} 3u{{-cycle3u-}}(narrow) 3u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
+    {% capture picclass %}2u{{cycle2u}} 3u{{-cycle3u-}}(narrow) 4u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
     
     <div class="{{-picclass-}}">
       <div class="item">
