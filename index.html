@@ -18,7 +18,7 @@ order: 1
   <div class="row">
 
     {%- for _post in _posts -%}
-    {% capture picurl %}/assets/images/{{-post.picture-}}.jpg{% endcapture %}
+    {% capture picurl %}/assets/images/{{-_post.picture-}}.jpg{% endcapture %}
     {% capture cycle2u %}{%- cycle "2u":"","","","","","$" -%}{% endcapture %}
     {% capture cycle3u %}{%- cycle "3u":"","","","$" -%}{% endcapture %}
     {% capture cycle4u %}{%- cycle "4u":"","","$" -%}{% endcapture %}
@@ -27,7 +27,7 @@ order: 1
     
     <div class="{{-picclass-}}">
       <div class="item">
-        <a href="{{-_post.url-}}" class="image fit"><img src="{{-picurl-}}" alt="{{-_post.title-}}" /></a>
+        <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-_post.title-}}" /></a>
       </div>
     </div>
     {% endfor %}
