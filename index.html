@@ -2,118 +2,34 @@
 # You don't need to edit this file, it's empty on purpose.
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: page
+layout: default
 title: We Will Remember Them
 icon: fa-th
 order: 1
 ---
 
-<div class="row">
-  <div class="3u 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
-      <header>
-        <h3>Ipsum Feugiat</h3>
-      </header>
-    </div>
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
-      <header>
-        <h3>Rhoncus Semper</h3>
-      </header>
-    </div>
-  </div>
-  <div class="3u 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
-      <header>
-        <h3>Magna Nullam</h3>
-      </header>
-    </div>
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic05.jpg' | relative_url }}" alt="Natoque Vitae" /></a>
-      <header>
-        <h3>Natoque Vitae</h3>
-      </header>
-    </div>
-  </div>
-  <div class="3u 4u$(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic06.jpg' | relative_url }}" alt="Dolor Penatibus" /></a>
-      <header>
-        <h3>Dolor Penatibus</h3>
-      </header>
-    </div>
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic07.jpg' | relative_url }}" alt="Orci Convallis" /></a>
-      <header>
-        <h3>Orci Convallis</h3>
-      </header>
-    </div>
-  </div>
-</div>
+{%- assign _posts = site.posts | sort: 'date' | reverse -%}
 
-<div class="row">
-  <div class="2u 3u(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
-      <header>
-        <h3>Ipsum Feugiat</h3>
-      </header>
-    </div>
-  </div>
-  <div class="2u 3u(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
-      <header>
-        <h3>Magna Nullam</h3>
-      </header>
-    </div>
-  </div>
-  <div class="2u 3u(narrow) 4u$(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
-      <header>
-        <h3>Rhoncus Semper</h3>
-      </header>
-    </div>
-  </div>
-  <div class="2u 3u$(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic05.jpg' | relative_url }}" alt="Natoque Vitae" /></a>
-      <header>
-        <h3>Natoque Vitae</h3>
-      </header>
-    </div>
-  </div>
-  <div class="2u 3u(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic06.jpg' | relative_url }}" alt="Dolor Penatibus" /></a>
-      <header>
-        <h3>Dolor Penatibus</h3>
-      </header>
-    </div>
-  </div>
-  <div class="2u$ 3u$(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="#" class="image fit"><img src="{{ 'assets/images/pic07.jpg' | relative_url }}" alt="Orci Convallis" /></a>
-      <header>
-        <h3>Orci Convallis</h3>
-      </header>
-    </div>
-  </div>
-</div>
+{%- include header.html scrolly_nav=_posts -%}
 
-<div class="row">
-{% for i in (2..7) %}
-{% capture picurl %}assets/images/pic0{{- i -}}.jpg{% endcapture %}
-  <div class="2u 3u{%- cycle "","","","$" -%}(narrow) 4u(narrower) 12u$(mobile)">
-    <div class="item">
-      <a href="{{ '2018/01/12/elements.html' | relative_url }}" class="image fit"><img src="{{ picurl | relative_url }}" alt="Ipsum Feugiat" /></a>
-      <header>
-        <h3>Ipsum Feugiat</h3>
-      </header>
+<!-- Main -->
+<div id="main">
+
+  <div class="row">
+
+    {%- for _post in _posts- %}
+    {% capture picurl %}/assets/images/{{-post.picture-}}.jpg{% endcapture %}
+    {% capture cycle2u %}{%- cycle "2u":"","","","","","$" -%}{% endcapture %}
+    {% capture cycle3u %}{%- cycle "3u":"","","","$" -%}{% endcapture %}
+    {% capture cycle4u %}{%- cycle "4u":"","","$" -%}{% endcapture %}
+    {% capture cycle6u %}{%- cycle "6u":"","$" -%}{% endcapture %}
+    {% capture picclass %}2u{{-cycle2u-}} 3u{{-cycle3u-}}(narrow) 3u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
+    
+    <div class="{{-picclass-}}">
+      <div class="item">
+        <a href="{{-_post.url-}}" class="image fit"><img src="{{-picurl-}}" alt="{{-_post.title-}}" /></a>
+      </div>
     </div>
+    {% endfor %}
   </div>
-{% endfor %}
 </div>
