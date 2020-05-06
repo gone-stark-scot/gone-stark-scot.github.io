@@ -17,7 +17,7 @@ order: 1
 
   <div class="row">
 
-    {%- for _post in _posts- %}
+    {%- for _post in _posts -%}
     {% capture picurl %}/assets/images/{{-post.picture-}}.jpg{% endcapture %}
     {% capture cycle2u %}{%- cycle "2u":"","","","","","$" -%}{% endcapture %}
     {% capture cycle3u %}{%- cycle "3u":"","","","$" -%}{% endcapture %}
