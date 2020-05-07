@@ -23,16 +23,9 @@ order: 1
     {% capture cycle4u %}{%- cycle "4u":"","","$" -%}{% endcapture %}
     {% capture cycle6u %}{%- cycle "6u":"","$" -%}{% endcapture %}
     {% capture picclass %}2u{{cycle2u}} 3u{{-cycle3u-}}(narrow) 4u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
-    {% capture alt_text %}
-    {% if _post.long_title != "" %}
-    {{- _post.long_title --}}
-    {% else %}
-    {{- _post.title --}}
-    {% endif %}}
-    {% endcapture %}
     <div class="{{-picclass-}}">
       <div class="item">
-        <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-alt_text-}}" />
+        <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-_post.long_title|default:_post.title-}}" />
           <header>
             <h3>{{-_post.title-}}</h3>
         </header></a>
