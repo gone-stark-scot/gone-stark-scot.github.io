@@ -3,7 +3,7 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
-title: Gone But Not Forgotten
+title: Gallery
 icon: fa-th
 order: 1
 ---
@@ -25,10 +25,10 @@ order: 1
     {% capture picclass %}2u{{cycle2u}} 3u{{-cycle3u-}}(narrow) 4u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
     <div class="{{-picclass-}}">
       <div class="item">
-        <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-_post.title-}}" /></a>
-        <header>
-          <h3>{{-_post.caption-}}</h3>
-        </header>
+        <a href="{{-_post.url|relative_url-}}" class="image fit"><img src="{{-picurl|relative_url-}}" alt="{{-_post.title-}}" />
+          <header>
+            <h3>{{-_post.caption-}}</h3>
+        </header></a>
       </div>
     </div>
     {% endfor %}
