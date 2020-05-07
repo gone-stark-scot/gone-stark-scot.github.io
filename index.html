@@ -24,10 +24,10 @@ order: 1
     {% capture cycle6u %}{%- cycle "6u":"","$" -%}{% endcapture %}
     {% capture picclass %}2u{{cycle2u}} 3u{{-cycle3u-}}(narrow) 4u{{-cycle3u-}}(narrower) 6u{{-cycle6u-}}(mobile){% endcapture %}
     {% capture alt_text %}
-    {% if _post.long_title = "" %}
-    {{- _post.title --}}
-    {% else %}
+    {% if _post.long_title != "" %}
     {{- _post.long_title --}}
+    {% else %}
+    {{- _post.title --}}
     {% endif %}}
     {% endcapture %}
     <div class="{{-picclass-}}">
